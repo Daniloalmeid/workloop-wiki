@@ -1,71 +1,47 @@
 # 🔍 Prospecção de Clientes
 
-> Duas abordagens: browser manual (gratuito) ou Apify (automático, pago).
+## Regioes Alvo (7 bairros)
+Jaragua · Pirituba · Perus · Sao Domingos · Brasilandia · Lapa · Caieiras
 
-## Abordagem 1: Browser Manual (Playwright) — RECOMENDADO
+## Abordagem
+Usar o navegador (Playwright) para acessar Google Maps diretamente.
+Sem custo. 1 nicho por dia.
 
-Sem custo. Usamos o navegador para acessar o Google Maps diretamente.
+## Schedule Semanal
 
-### Passo a passo
+| Dia | Nicho |
+|-----|-------|
+| Seg | Material de Construcao |
+| Ter | Pet Shops |
+| Qua | Clinicas Estetica + Salao |
+| Qui | Restaurantes + Lanchonetes |
+| Sex | Oficinas + Borracharias |
+| Sab | Mercados + Padarias + Acougues |
+| Dom | Outros (academias, escolas, farmacias) |
 
-1. Pedir pro Hermes: "Busca leads de [NICHO] em [BAIRRO]"
-2. Hermes abre Google Maps no navegador
-3. Extrai: nome, telefone, endereço, avaliação
-4. Tenta encontrar Instagram via curl no site do negócio
-5. Compila tabela de leads
+## Banco de Leads (SQLite)
 
-### Como pedir
-"Busca material de construcao em Jaragua Sao Paulo no Google Maps"
+Arquivo: /root/leads/leads.db
 
-### Resultado
-Tabela com nome, telefone, endereço, Instagram (quando disponível).
+### Antes de enviar, consultar:
+SELECT status FROM leads WHERE telefone = '5511XXXXXXXXX';
 
-## Abordagem 2: Apify (Automático) — Pago
+### Status possiveis:
+- enviado = ja recebeu mensagem (nao reenviar)
+- fixo = numero fixo sem WhatsApp
+- nao_contatado = novo, pode enviar
 
-Requer créditos no Apify (~$0,05/execução). Usar quando o browser não for viável.
-
-**Setup:**
-1. Instalar ator compass/crawler-google-places em console.apify.com
-2. Adicionar cartão de crédito (vem $5/mês grátis)
-3. Rodar via script: `python3 /root/scripts/prospeccao-diaria.py`
-
-## Schedule Semanal (Browser Manual)
-
-| Dia | Nicho | Região |
-|-----|-------|--------|
-| Seg 🏗️ | Material de Construção | Jaraguá |
-| Ter 🐾 | Pet Shops | Jaraguá/Pirituba |
-| Qua 💆 | Clínicas Estética + Salão | Jaraguá |
-| Qui 🍕 | Restaurantes | Jaraguá |
-| Sex 🔧 | Oficinas | Jaraguá |
-| Sáb 🛒 | Mercados/Padarias | Jaraguá |
-| Dom 🏫 | Outros | Jaraguá |
+### Inserir novo lead apos envio:
+INSERT INTO leads (nome, telefone, endereco, bairro, nicho, avaliacao, status, data_envio)
+VALUES ('Nome', '5511XXXXXXX', 'Endereco', 'Bairro', 'Nicho', 4.5, 'enviado', datetime('now'));
 
 ## Mensagens de Abordagem
 
-### Material de Construção
-```
-Olá, tudo bem? Aqui é o Danilo, do Workloop.
-
-Vi que sua loja aqui no Jaraguá tem potencial pra crescer com automação no WhatsApp.
-A gente cria um sistema que atende orçamento 24h, dispara promoções e organiza pedidos.
-
-Quer testar 15 dias grátis? Valeu!
-```
+### Material de Construcao
+"Ola, tudo bem? Aqui e o Danilo, do Workloop. Vi que sua loja na regiao tem potencial pra crescer com automacao no WhatsApp. Sistema que atende orcamento 24h, dispara promocoes e organiza pedidos. 15 dias gratis. Valeu!"
 
 ### Pet Shop
-```
-Oi, Danilo do Workloop. Sistema que lembra vacinas, agenda banho, dispara ofertas de ração.
-15 dias grátis sem fidelidade. Topa um teste?
-```
+"Oi, Danilo do Workloop. Sistema que lembra vacinas, agenda banho, dispara ofertas. 15 dias gratis. Topa?"
 
-### Clínica de Estética
-```
-Oi, Danilo do Workloop. WhatsApp automático: confirma consultas, lembretes, ofertas.
-Menos falta, mais agendamento. 15 dias grátis?
-```
-
-## Dados
-
-Os leads coletados ficam salvos em /root/leads/.
-Cada arquivo tem data e nicho no nome.
+### Clinica de Estetica
+"Oi, Danilo do Workloop. WhatsApp automatico: confirma consultas, lembretes, ofertas. Menos falta, mais agendamento. 15 dias gratis?"
