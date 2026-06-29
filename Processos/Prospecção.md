@@ -4,44 +4,60 @@
 Jaragua · Pirituba · Perus · Sao Domingos · Brasilandia · Lapa · Caieiras
 
 ## Abordagem
-Usar o navegador (Playwright) para acessar Google Maps diretamente.
-Sem custo. 1 nicho por dia.
-
-## Schedule Semanal
-
-| Dia | Nicho |
-|-----|-------|
-| Seg | Material de Construcao |
-| Ter | Pet Shops |
-| Qua | Clinicas Estetica + Salao |
-| Qui | Restaurantes + Lanchonetes |
-| Sex | Oficinas + Borracharias |
-| Sab | Mercados + Padarias + Acougues |
-| Dom | Outros (academias, escolas, farmacias) |
-
-## Banco de Leads (SQLite)
-
-Arquivo: /root/leads/leads.db
-
-### Antes de enviar, consultar:
-SELECT status FROM leads WHERE telefone = '5511XXXXXXXXX';
-
-### Status possiveis:
-- enviado = ja recebeu mensagem (nao reenviar)
-- fixo = numero fixo sem WhatsApp
-- nao_contatado = novo, pode enviar
-
-### Inserir novo lead apos envio:
-INSERT INTO leads (nome, telefone, endereco, bairro, nicho, avaliacao, status, data_envio)
-VALUES ('Nome', '5511XXXXXXX', 'Endereco', 'Bairro', 'Nicho', 4.5, 'enviado', datetime('now'));
+Usar navegador (Playwright) no Google Maps. 1 nicho/dia.
 
 ## Mensagens de Abordagem
 
 ### Material de Construcao
-"Ola, tudo bem? Aqui e o Danilo, do Workloop. Vi que sua loja na regiao tem potencial pra crescer com automacao no WhatsApp. Sistema que atende orcamento 24h, dispara promocoes e organiza pedidos. 15 dias gratis. Valeu!"
+"Ola, tudo bem? Aqui e o Danilo, do Workloop.
+
+A gente cria um sistema de IA que:
+• Controla o estoque automaticamente
+• Tudo por comando de voz — so falar e o sistema resolve
+• Atende orcamentos 24h pelo WhatsApp
+• Dispara promocoes pros clientes
+• APRENDE com o uso — quanto mais usa, mais inteligente
+
+E eu estou aqui pessoalmente pra qualquer dificuldade da sua empresa.
+
+Quer testar 15 dias gratis? Valeu!"
 
 ### Pet Shop
-"Oi, Danilo do Workloop. Sistema que lembra vacinas, agenda banho, dispara ofertas. 15 dias gratis. Topa?"
+"Oi, tudo bem? Aqui e o Danilo, do Workloop.
+
+Sistema de IA pro seu pet shop:
+• Controla estoque de racao e produtos
+• Tudo por comando de voz
+• Lembra clientes de vacina e banho
+• Agenda automaticamente
+• APRENDE com o uso
+
+E eu estou aqui pra qualquer dificuldade.
+
+15 dias gratis. Topa?"
 
 ### Clinica de Estetica
-"Oi, Danilo do Workloop. WhatsApp automatico: confirma consultas, lembretes, ofertas. Menos falta, mais agendamento. 15 dias gratis?"
+"Oi, tudo bem? Aqui e o Danilo, do Workloop.
+
+Sistema de IA pra sua clinica:
+• Controla estoque de insumos
+• Tudo por comando de voz
+• Confirma consultas e manda lembretes
+• Dispara ofertas
+• APRENDE com o uso
+
+E eu estou aqui pra qualquer dificuldade.
+
+15 dias gratis. Valeu!"
+
+## Banco de Leads
+
+SQLite em /root/leads/leads.db
+
+Consultar antes de enviar: SELECT status FROM leads WHERE telefone = '5511XXXXX';
+
+Status: enviado (nao reenviar), fixo (sem WA), nao_contatado (pode enviar)
+
+## Schedule
+
+Seg=Mat.Construcao, Ter=Pet Shops, Qua=Clinicas/Saloes, Qui=Restaurantes, Sex=Oficinas, Sab=Mercados, Dom=Outros
