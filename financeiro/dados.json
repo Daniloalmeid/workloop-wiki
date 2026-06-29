@@ -1,0 +1,29 @@
+{
+  "custos_fixos": {
+    "vps": 0,
+    "tailscale": 0,
+    "deepseek_api": 0,
+    "evolution_api": 0,
+    "supabase": 0,
+    "replicate": 0,
+    "capcut": 0,
+    "instagram": 0,
+    "dominio": 0,
+    "outros": 0
+  },
+  "clientes": [
+    {
+      "nome": "Clínica de Estética",
+      "plano": "Em implantação",
+      "valor_mensal": 0,
+      "status": "teste_gratis"
+    }
+  ],
+  "meta_curto_prazo": 500,
+  "meta_longo_prazo": 5000,
+  "precos": {
+    "basico": 49,
+    "profissional": 97,
+    "premium": 147
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#homes  ",
+      "color": {
+        "a": 1,
+        "rgb": 15074565
+      }
+    },
+    {
+      "query": "path:Clientes  ",
+      "color": {
+        "a": 1,
+        "rgb": 16636981
+      }
+    },
+    {
+      "query": "path:Arquitetura  ",
+      "color": {
+        "a": 1,
+        "rgb": 7841558
+      }
+    },
+    {
+      "query": "path:Infraestrutura  ",
+      "color": {
+        "a": 1,
+        "rgb": 5534962
+      }
+    },
+    {
+      "query": "path:Processos  ",
+      "color": {
+        "a": 1,
+        "rgb": 15107243
+      }
+    },
+    {
+      "query": "path:\"Redes Sociais\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 983173
+      }
+    },
+    {
+      "query": "",
+      "color": {
+        "a": 1,
+        "rgb": 6053078
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -1.2,
+  "nodeSizeMultiplier": 1.347920997921,
+  "lineSizeMultiplier": 1.89802494802495,
+  "collapse-forces": false,
+  "centerStrength": 0.5,
+  "repelStrength": 10,
+  "linkStrength": 0.707900207900208,
+  "linkDistance": 271,
+  "scale": 1,
+  "close": true
+}
