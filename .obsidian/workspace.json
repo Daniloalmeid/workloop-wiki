@@ -11,10 +11,14 @@
             "id": "d61e8c6125b5d52e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "type": "markdown",
+              "state": {
+                "file": "Processos/Prospecção.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Prospecção"
             }
           }
         ]
@@ -177,8 +181,9 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "c9e9538190b6156a",
+  "active": "d61e8c6125b5d52e",
   "lastOpenFiles": [
+    "Infraestrutura/Infraestrutura.md",
     "Avancos/Sub-Agente Revisor.md",
     "Dashboard.md",
     "financeiro/gerar.py",
@@ -203,7 +208,6 @@
     "Clientes",
     "Redes Sociais/Instagram.md",
     "Redes Sociais",
-    "Infraestrutura/Infraestrutura.md",
     "Infraestrutura",
     "Ferramentas/Replicate.md",
     "Ferramentas",
