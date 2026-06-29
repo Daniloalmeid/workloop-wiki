@@ -1,29 +1,35 @@
-# 🔍 Prospecção de Clientes
+# 🔍 Prospecção Automática
 
-## Como encontramos clientes
+> Sistema automatizado via Apify + Hermes cron. 1 nicho/dia.
 
-| Método | Ferramenta | Status |
-|---|---|---|
-| Google Maps | Apify / Manual | ✅ Funcionando |
-| Indicação | Rede de contatos | 📝 A fazer |
+## Schedule Semanal
 
-## Passo a passo
+| Dia | Nicho |
+|-----|-------|
+| Seg 🏗️ | Material de Construção |
+| Ter 🐾 | Pet Shops |
+| Qua 💆 | Clínicas Estética + Salão |
+| Qui 🍕 | Restaurantes + Lanchonetes |
+| Sex 🔧 | Oficinas + Borracharias |
+| Sáb 🛒 | Mercados + Padarias + Açougues |
+| Dom 🏫 | Outros (academias, escolas, farmácias) |
 
-1. Buscar clínicas de estética no Google Maps
-2. Coletar: nome, telefone, endereço, avaliações
-3. Qualificar por porte/localização
-4. Abordar via WhatsApp com proposta
-5. Se interesse → [[Processos/Onboarding]]
+## Como funciona
 
-## Mensagem de abordagem
-```text
-Olá! Me chamo [NOME], sou da Workloop.
+1. **08:00** — Cron job dispara no Hermes
+2. Busca Google Maps via Apify
+3. Salva em /root/leads/
+4. Entrega relatório no Telegram
 
-Criamos assistentes de IA para clínicas que:
-✅ Atendem WhatsApp 24h sem demora
-✅ Agendam horários automaticamente
-✅ Mandam lembretes e evitam faltas
-✅ Cuidam do pós-procedimento
+**Custo:** ~$1,50/mês de Apify
 
-Quer ver uma demonstração rápida? Sem compromisso.
-```
+## Mensagens de Abordagem
+
+### Material de Construção
+Olá, tudo bem? Aqui é o Danilo, do Workloop. Vi sua loja aqui no Jaraguá. A gente automatiza WhatsApp pra você: orçamento 24h, promoções, pedidos. 15 dias grátis. Valeu!
+
+### Pet Shop
+Oi, Danilo do Workloop. Sistema que lembra vacinas, agenda banho, dispara ofertas. 15 dias grátis sem fidelidade. Topa um teste?
+
+### Clínica de Estética
+Oi, Danilo do Workloop. WhatsApp automático pra sua clínica: confirma consultas, lembretes, ofertas. Menos falta, mais agendamento. 15 dias grátis?
