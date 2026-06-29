@@ -4,7 +4,16 @@
 Jaragua · Pirituba · Perus · Sao Domingos · Brasilandia · Lapa · Caieiras
 
 ## Abordagem
-Usar navegador (Playwright) no Google Maps. 1 nicho/dia.
+Navegador (Playwright) no Google Maps. 1 nicho/dia.
+
+## Diferenciais do Workloop
+- Controle de estoque automatico
+- Tudo por comando de voz
+- Atendimento WhatsApp 24h
+- Postagem automatica no Instagram
+- Recuperacao de clientes que nao voltam
+- Aprende com o uso (IA continua)
+- Suporte pessoal (Danilo disponivel)
 
 ## Mensagens de Abordagem
 
@@ -13,14 +22,16 @@ Usar navegador (Playwright) no Google Maps. 1 nicho/dia.
 
 A gente cria um sistema de IA que:
 • Controla o estoque automaticamente
-• Tudo por comando de voz — so falar e o sistema resolve
+• Tudo por comando de voz
 • Atende orcamentos 24h pelo WhatsApp
 • Dispara promocoes pros clientes
-• APRENDE com o uso — quanto mais usa, mais inteligente
+• Faz postagem automatica no Instagram
+• Recupera clientes que nao voltam ha meses
+• APRENDE com ouso
 
-E eu estou aqui pessoalmente pra qualquer dificuldade da sua empresa.
+E eu estou aqui pra qualquer dificuldade da sua empresa.
 
-Quer testar 15 dias gratis? Valeu!"
+15 dias gratis. Valeu!"
 
 ### Pet Shop
 "Oi, tudo bem? Aqui e o Danilo, do Workloop.
@@ -28,8 +39,9 @@ Quer testar 15 dias gratis? Valeu!"
 Sistema de IA pro seu pet shop:
 • Controla estoque de racao e produtos
 • Tudo por comando de voz
-• Lembra clientes de vacina e banho
-• Agenda automaticamente
+• Lembra de vacina e banho
+• Postagem automatica no Instagram
+• Recupera clientes que nao voltam
 • APRENDE com o uso
 
 E eu estou aqui pra qualquer dificuldade.
@@ -43,7 +55,8 @@ Sistema de IA pra sua clinica:
 • Controla estoque de insumos
 • Tudo por comando de voz
 • Confirma consultas e manda lembretes
-• Dispara ofertas
+• Postagem automatica no Instagram
+• Recupera clientes que nao voltam
 • APRENDE com o uso
 
 E eu estou aqui pra qualquer dificuldade.
@@ -51,13 +64,9 @@ E eu estou aqui pra qualquer dificuldade.
 15 dias gratis. Valeu!"
 
 ## Banco de Leads
-
-SQLite em /root/leads/leads.db
-
+SQLite: /root/leads/leads.db
 Consultar antes de enviar: SELECT status FROM leads WHERE telefone = '5511XXXXX';
-
-Status: enviado (nao reenviar), fixo (sem WA), nao_contatado (pode enviar)
+Status: enviado, fixo, nao_contatado
 
 ## Schedule
-
 Seg=Mat.Construcao, Ter=Pet Shops, Qua=Clinicas/Saloes, Qui=Restaurantes, Sex=Oficinas, Sab=Mercados, Dom=Outros
